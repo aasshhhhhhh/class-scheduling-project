@@ -34,6 +34,16 @@ class TimeSlot:
         self.forbidden = forbidden
         self.is_occupied = False    # ตรวจสอบว่าช่วงเวลานี้ถูกใช้แล้วหรือไม่
 
+class Config:
+    """เก็บค่า Config ทั่วไป"""
+    def __init__(self, max_weekly_hours, max_daily_courses,max_morning_courses, max_afternoon_courses, lunch_break, forbidden_slot):
+        self.max_weekly_hours = max_weekly_hours
+        self.max_daily_courses = max_daily_courses
+        self.forbidden_slot = forbidden_slot
+        self.max_morning_courses = max_morning_courses
+        self.max_afternoon_courses = max_afternoon_courses
+        self.lunch_break = lunch_break
+
 class Schedule:
     """จัดการตารางเรียนทั้งหมด"""
     def __init__(self):
@@ -41,18 +51,19 @@ class Schedule:
         self.instructors = {}       # {instructorId: Instructor object}
         self.time_slots = {}        # {slot_id: TimeSlot object}
         self.assigned_slots = {}    # {(course_code, slot_id): True} เก็บการจับคู่วิชา-เวลา
+        self.config = None          # เพิ่ม attribute สำหรับเก็บ Config object
         
-    def add_course(self, course_data):
+    def add_course(self, **course_data):
         """เพิ่มวิชาลงในระบบ"""
         course = Course(**course_data)
         self.courses[course.course_code] = course
         
-    def add_instructor(self, instructor_data):
+    def add_instructor(self, **instructor_data):
         """เพิ่มอาจารย์ลงในระบบ"""
         instructor = Instructor(**instructor_data)
         self.instructors[instructor.instructorId] = instructor
         
-    def add_time_slot(self, time_slot_data):
+    def add_time_slot(self, **time_slot_data):
         """เพิ่มช่วงเวลาลงในระบบ"""
         time_slot = TimeSlot(**time_slot_data)
         self.time_slots[time_slot.slot_id] = time_slot
