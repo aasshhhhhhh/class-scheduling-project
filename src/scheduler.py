@@ -133,6 +133,6 @@ class Scheduler:
                 print("Backtracking failed for some courses.")
 
 
-scheduler = Scheduler()
-slot = scheduler.find_continuous_slots(instructor_id="INT01",study_hours=3)
-print(slot)
+# scheduler = Scheduler()
+# slot = scheduler.find_continuous_slots(instructor_id="INT01",study_hours=3)
+# print(slot)
