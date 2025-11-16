@@ -1,0 +1,745 @@
+{
+  "courses": [
+    {
+      "course_code": "ENE100",
+      "course_name": "Introduction to Electrical Communication and Electronic Engineering",
+      "year": 1,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE130",
+      "course_name": "Basic Computer Programming Languages",
+      "year": 1,
+      "credits": 1,
+      "study_hours": 1,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE109",
+      "course_name": "Engineering Drawing for Electrical Engineering",
+      "year": 1,
+      "credits": 2,
+      "study_hours": 3,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "MTH101",
+      "course_name": "Mathematics I",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT02",
+      "priority": 1
+    },
+    {
+      "course_code": "PHY103",
+      "course_name": "General Physics for Engineering Students I",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT03",
+      "priority": 1
+    },
+    {
+      "course_code": "PHY191",
+      "course_name": "General Physics Laboratory I",
+      "year": 1,
+      "credits": 1,
+      "study_hours": 2,
+      "instructorId": "INT03",
+      "priority": 1
+    },
+    {
+      "course_code": "GEN101",
+      "course_name": "Physical Education",
+      "year": 1,
+      "credits": 1,
+      "study_hours": 1,
+      "instructorId": "INT04",
+      "priority": 2
+    },
+    {
+      "course_code": "GEN121",
+      "course_name": "Learning and Problem Solving Skills",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT04",
+      "priority": 2
+    },
+    {
+      "course_code": "LNG120",
+      "course_name": "General English",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT05",
+      "priority": 2
+    },
+    {
+      "course_code": "LNG220",
+      "course_name": "Academic English",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT05",
+      "priority": 2
+    },
+    {
+      "course_code": "ENE101",
+      "course_name": "Signals and Systems",
+      "year": 1,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE102",
+      "course_name": "Fundamentals of Probability Theory and Statistics",
+      "year": 1,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE104",
+      "course_name": "Circuit Analysis and Simulation",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "MTH102",
+      "course_name": "Mathematics II",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT02",
+      "priority": 1
+    },
+    {
+      "course_code": "CHM103",
+      "course_name": "Fundamental Chemistry",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT06",
+      "priority": 3
+    },
+    {
+      "course_code": "CHM160",
+      "course_name": "Chemistry Laboratory I",
+      "year": 1,
+      "credits": 1,
+      "study_hours": 3,
+      "instructorId": "INT06",
+      "priority": 3
+    },
+    {
+      "course_code": "GEN111",
+      "course_name": "Man and Ethics of Living",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT04",
+      "priority": 2
+    },
+    {
+      "course_code": "LNG223",
+      "course_name": "English for Workplace Communication",
+      "year": 1,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT05",
+      "priority": 2
+    },
+    {
+      "course_code": "ENE200",
+      "course_name": "Electrical Signal Measurements and Instrumentation",
+      "year": 2,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT07",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE202",
+      "course_name": "Basic Electricity Measurement and Electronics Laboratory",
+      "year": 2,
+      "credits": 1,
+      "study_hours": 3,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE210",
+      "course_name": "Electronic Devices and IC Technologies",
+      "year": 2,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE220",
+      "course_name": "Principles of Electrical Communication Systems I",
+      "year": 2,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT08",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE230",
+      "course_name": "Basics of Algorithms and Data Structures",
+      "year": 2,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "MTH201",
+      "course_name": "Mathematics III",
+      "year": 2,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT02",
+      "priority": 1
+    },
+    {
+      "course_code": "PHY104",
+      "course_name": "General Physics for Engineering Students II",
+      "year": 2,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT03",
+      "priority": 1
+    },
+    {
+      "course_code": "PHY192",
+      "course_name": "General Physics Laboratory II",
+      "year": 2,
+      "credits": 1,
+      "study_hours": 2,
+      "instructorId": "INT03",
+      "priority": 1
+    },
+    {
+      "course_code": "GEN241",
+      "course_name": "Beauty of Life",
+      "year": 2,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT04",
+      "priority": 2
+    },
+    {
+      "course_code": "MEE214",
+      "course_name": "Engineering Mechanics",
+      "year": 2,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT09",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE341",
+      "course_name": "Linear Control Systems",
+      "year": 3,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE301",
+      "course_name": "Probability Theorem and Stochastic Systems",
+      "year": 3,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT07",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE310",
+      "course_name": "Introduction to Power Electronics",
+      "year": 3,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE311",
+      "course_name": "Fundamentals of Electronic Product Design",
+      "year": 3,
+      "credits": 1,
+      "study_hours": 3,
+      "instructorId": "INT07",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE321",
+      "course_name": "Data Communication Network",
+      "year": 3,
+      "credits": 2,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE325",
+      "course_name": "Electromagnetic Fields and Waves",
+      "year": 3,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE334",
+      "course_name": "Microprocessor-based Computer Systems",
+      "year": 3,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT08",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE370",
+      "course_name": "Seminar",
+      "year": 3,
+      "credits": 1,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE470",
+      "course_name": "Project in Electrical Communication and Electronic Engineering II: Progress",
+      "year": 4,
+      "credits": 1,
+      "study_hours": 2,
+      "instructorId": "INT01",
+      "priority": 3
+    },
+    {
+      "course_code": "ENE471",
+      "course_name": "Project in Electrical Communication and Electronic Engineering III: Delivery",
+      "year": 4,
+      "credits": 1,
+      "study_hours": 2,
+      "instructorId": "INT07",
+      "priority": 3
+    },
+    {
+      "course_code": "MEN111",
+      "course_name": "Engineering Materials",
+      "year": 4,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT10",
+      "priority": 3
+    },
+    {
+      "course_code": "PRE380",
+      "course_name": "Engineering Economics",
+      "year": 4,
+      "credits": 3,
+      "study_hours": 3,
+      "instructorId": "INT11",
+      "priority": 3
+    }
+  ],
+  
+  "instructors": [
+    {
+      "instructorId": "INT01",
+      "instructorName": "Somchai",
+      "department": "ENE",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20, 25, 26, 27, 28, 33, 34, 35, 36],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT02",
+      "instructorName": "Anika",
+      "department": "MTH",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT03",
+      "instructorName": "Paul",
+      "department": "PHY",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT04",
+      "instructorName": "Nisa",
+      "department": "GEN",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT05",
+      "instructorName": "Kanya",
+      "department": "LNG",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT06",
+      "instructorName": "Sasithorn",
+      "department": "CHM",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT07",
+      "instructorName": "Arthit",
+      "department": "ENE",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20, 25, 26, 27, 28, 33, 34, 35, 36],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT08",
+      "instructorName": "Ratchada",
+      "department": "ENE",
+      "available_slots": [1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20, 25, 26, 27, 28, 33, 34, 35, 36],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT09",
+      "instructorName": "Phuwanai",
+      "department": "MEE",
+      "available_slots": [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT10",
+      "instructorName": "Krit",
+      "department": "MEN",
+      "available_slots": [33, 34, 35, 36, 37, 38, 39, 40, 25, 26, 27, 28, 29, 30, 31, 32],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    },
+    {
+      "instructorId": "INT11",
+      "instructorName": "Siriporn",
+      "department": "PRE",
+      "available_slots": [33, 34, 35, 36, 37, 38, 39, 40, 25, 26, 27, 28, 29, 30, 31, 32],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    }
+  ],
+  "time_slots": [
+    {
+      "slot_id": 1,
+      "day": "Monday",
+      "time": "08:30-09:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 2,
+      "day": "Monday",
+      "time": "09:30-10:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 3,
+      "day": "Monday",
+      "time": "10:30-11:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 4,
+      "day": "Monday",
+      "time": "11:30-12:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 5,
+      "day": "Monday",
+      "time": "13:30-14:30",
+      "period": "afternoon",
+      "forbidden": true
+    },
+    {
+      "slot_id": 6,
+      "day": "Monday",
+      "time": "14:30-15:30",
+      "period": "afternoon",
+      "forbidden": true
+    },
+    {
+      "slot_id": 7,
+      "day": "Monday",
+      "time": "15:30-16:30",
+      "period": "afternoon",
+      "forbidden": true
+    },
+    {
+      "slot_id": 8,
+      "day": "Monday",
+      "time": "16:30-17:30",
+      "period": "afternoon",
+      "forbidden": true
+    },
+    {
+      "slot_id": 9,
+      "day": "Tuesday",
+      "time": "08:30-09:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 10,
+      "day": "Tuesday",
+      "time": "09:30-10:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 11,
+      "day": "Tuesday",
+      "time": "10:30-11:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 12,
+      "day": "Tuesday",
+      "time": "11:30-12:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 13,
+      "day": "Tuesday",
+      "time": "13:30-14:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 14,
+      "day": "Tuesday",
+      "time": "14:30-15:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 15,
+      "day": "Tuesday",
+      "time": "15:30-16:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 16,
+      "day": "Tuesday",
+      "time": "16:30-17:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 17,
+      "day": "Wednesday",
+      "time": "08:30-09:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 18,
+      "day": "Wednesday",
+      "time": "09:30-10:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 19,
+      "day": "Wednesday",
+      "time": "10:30-11:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 20,
+      "day": "Wednesday",
+      "time": "11:30-12:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 21,
+      "day": "Wednesday",
+      "time": "13:30-14:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 22,
+      "day": "Wednesday",
+      "time": "14:30-15:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 23,
+      "day": "Wednesday",
+      "time": "15:30-16:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 24,
+      "day": "Wednesday",
+      "time": "16:30-17:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 25,
+      "day": "Thursday",
+      "time": "08:30-09:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 26,
+      "day": "Thursday",
+      "time": "09:30-10:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 27,
+      "day": "Thursday",
+      "time": "10:30-11:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 28,
+      "day": "Thursday",
+      "time": "11:30-12:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 29,
+      "day": "Thursday",
+      "time": "13:30-14:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 30,
+      "day": "Thursday",
+      "time": "14:30-15:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 31,
+      "day": "Thursday",
+      "time": "15:30-16:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 32,
+      "day": "Thursday",
+      "time": "16:30-17:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 33,
+      "day": "Friday",
+      "time": "08:30-09:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 34,
+      "day": "Friday",
+      "time": "09:30-10:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 35,
+      "day": "Friday",
+      "time": "10:30-11:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 36,
+      "day": "Friday",
+      "time": "11:30-12:30",
+      "period": "morning",
+      "forbidden": false
+    },
+    {
+      "slot_id": 37,
+      "day": "Friday",
+      "time": "13:30-14:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 38,
+      "day": "Friday",
+      "time": "14:30-15:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 39,
+      "day": "Friday",
+      "time": "15:30-16:30",
+      "period": "afternoon",
+      "forbidden": false
+    },
+    {
+      "slot_id": 40,
+      "day": "Friday",
+      "time": "16:30-17:30",
+      "period": "afternoon",
+      "forbidden": false
+    }
+  ],
+  "config": {
+    "max_weekly_hours": 15,
+    "max_daily_courses": 2,
+    "forbidden_slot_ids": [5, 6, 7, 8],
+    "max_morning_courses": 2,
+    "max_afternoon_courses": 2,
+    "lunch_break": "12:30-13:30"
+  }
+}
