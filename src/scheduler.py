@@ -110,6 +110,8 @@ class Scheduler:
 
         for course in sorted_courses:
             instructor = self.instructors[course.instructorId]
+
+            slot_ids = self.find_continuous_slots(instructor.instructorId, course.study_hours)
             
             if slot_ids and check_assign_rules(
                 instructor, 
@@ -120,8 +122,8 @@ class Scheduler:
                 self.schedule.config
             ):
                 self.assign_course(course, instructor, slot_ids)
-        else:
-            unscheduled.append(course)
+            else:
+                unscheduled.append(course)
 
         if unscheduled and use_backtracking:
             success = self.schedule_backtrack(unscheduled)
