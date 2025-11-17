@@ -90,6 +90,30 @@ if __name__ == "__main__":
         my_schedule = load_data(data_path)
         
         print(f"Loaded {len(my_schedule.courses)} courses")
+
+        year_counts = {}
+        total_hours = {}
+
+        for course in my_schedule.courses.values():
+            y = course.year
+            if y in year_counts:
+                year_counts[y] += 1
+            else:
+                year_counts[y] = 1
+
+            h = course.study_hours
+            if y in total_hours:
+                total_hours[y] += h
+            else:
+                total_hours[y] = h
+
+        print("Courses per Year and Total Study Hours per Year:")
+        for year in sorted(year_counts.keys()):
+            count = year_counts[year]   
+            hours = total_hours[year]   
+            
+            print(f"  - Year {year}: {count} courses, Total {hours} hours")
+
         print(f"Loaded {len(my_schedule.time_slots)} slots")
         print(f"Loaded {len(my_schedule.instructors)} instructors")
         print(f"Config max_weekly_hours: {my_schedule.config.max_weekly_hours}")
