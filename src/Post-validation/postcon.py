@@ -51,7 +51,8 @@ def validate_final_timetable(timetable, instructors, time_slots, config):
             instructor_hours[instructor_id] += 1
 
             # --- ตรวจไม่เกิน 2 วิชา/วัน ---
-            instructor_courses_day[instructor_id][day].add(course_code)
+            # เวลาเจอคาบสอน เพิ่มเข้า list ทุกคาบ
+            instructor_courses_day[instructor_id][day].append(course_code)
 
         # เช็คจำนวนวิชา/ช่วงเวลาในวันนั้น
             if len(morning_courses) > config["max_morning_courses"]:
@@ -60,13 +61,11 @@ def validate_final_timetable(timetable, instructors, time_slots, config):
             if len(afternoon_courses) > config["max_afternoon_courses"]:
               return False, f"ERROR: {day} มีวิชาช่วงบ่ายมากกว่า 2 วิชา"
 
+   # ==========================
+    # ตรวจไม่เกิน 2 วิชา/วัน (นับจำนวนคาบทั้งหมด)
     # ==========================
-    # ตรวจอาจารย์เกิน 2 วิชา/วัน
-    # ==========================
-    for iid, days in instructor_courses_day.items():
-        for d, course_set in days.items():
-            if len(course_set) > config["max_courses_per_day"]:
-                return False, f"ERROR: {instructors[iid]['instructorName']} สอนเกิน 2 วิชาในวัน {d}"
+    if len(instructor_courses_day[instructor_id][day]) > config["max_courses_per_day"]:
+      return False, f"ERROR: {day} อาจารย์สอนเกิน 2 วิชาต่อวัน"
 
     # ==========================
     # ตรวจอาจารย์เกิน 15 ชั่วโมง/สัปดาห์
