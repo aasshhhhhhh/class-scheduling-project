@@ -1,4 +1,3 @@
-# File: precheck.py
 
 def check_assign_rules(instructor, course, slot_ids, time_slots_map, year_schedule, config):
 
