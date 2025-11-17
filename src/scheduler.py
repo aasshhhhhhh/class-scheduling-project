@@ -5,6 +5,7 @@ import os
 sys.path.append(os.path.dirname(__file__))
 
 from input_handler import load_data
+from constraints.precheck import check_assign_rules
 
 class Scheduler:
     def __init__(self, schedule=None):
@@ -52,27 +53,6 @@ class Scheduler:
             
         return [] 
 
-    
-    def can_assign(self, instructor, course, slot_ids):
-        if instructor.assigned_hours + course.study_hours > instructor.max_weekly_hours:
-            return False
-
-        daily_count = {}
-        for cid in instructor.assigned_courses:
-            c = self.courses[cid]
-            for sid in c.scheduled_slots:
-                day = self.time_slots[sid].day
-                if day not in daily_count:
-                    daily_count[day] = 0
-                daily_count[day] += 1
-
-        #loop slot ใหม่ ที่เราจะลองจัดวิชา
-        for sid in slot_ids:
-            day = self.time_slots[sid].day
-            if daily_count.get(day, 0) + 1 > instructor.max_daily_courses:
-                return False
-
-        return True
 
     def assign_course(self, course, instructor, slot_ids):
         for sid in slot_ids:
@@ -97,30 +77,50 @@ class Scheduler:
         instructor = self.instructors[course.instructorId]
         slot_ids = self.find_continuous_slots(instructor, course.study_hours)
 
-      
-        if slot_ids and self.can_assign(instructor, course, slot_ids):
+        if not slot_ids:
+            # If no slots, try next course in the list
+            remaining_courses = courses_list[1:]
+            return self.schedule_backtrack(remaining_courses)
+        
+        # Call the new precheck function (from constraint/precheck.py)
+        is_valid = check_assign_rules(
+            instructor, 
+            course, 
+            slot_ids, 
+            self.time_slots, 
+            self.schedule.year_schedules[course.year], # Get the specific year's schedule
+            self.schedule.config
+        )
+        
+        if is_valid: 
             self.assign_course(course, instructor, slot_ids)
             if self.schedule_backtrack(courses_list[1:]):
                 return True
             self.unassign_course(course, instructor, slot_ids)
 
-        #ตัวแปร remaining_courses เป็น list ของวิชาที่เหลือ ยกเว้นตัวแรก
+        # If not valid, or if backtracking failed, try the next course
         remaining_courses = courses_list[1:]
         return self.schedule_backtrack(remaining_courses)
         
-
-    #จัดตารางแบบ greedy
+    # Schedule using greedy algorithm
     def auto_schedule(self, use_backtracking=True):
         sorted_courses = sorted(self.courses.values(), key=lambda c: c.priority, reverse=True)
-        #สร้างลิสต์เก็บวิชาที่ยังจัดไม่ได้จากขั้นตอนแรกเพื่อจะเอาไปให้ backtracking ลองจัดต่อ
+        # Create a list to store unscheduled courses for backtracking
         unscheduled = []
 
         for course in sorted_courses:
             instructor = self.instructors[course.instructorId]
-            slot_ids = self.find_continuous_slots(instructor, course.study_hours)
 
-            #ถ้าพบ slot_ids และ can_assign คืน True
-            if slot_ids and self.can_assign(instructor, course, slot_ids):
+            slot_ids = self.find_continuous_slots(instructor.instructorId, course.study_hours)
+            
+            if slot_ids and check_assign_rules(
+                instructor, 
+                course, 
+                slot_ids, 
+                self.time_slots, 
+                self.schedule.year_schedules[course.year], 
+                self.schedule.config
+            ):
                 self.assign_course(course, instructor, slot_ids)
             else:
                 unscheduled.append(course)
@@ -131,8 +131,3 @@ class Scheduler:
                 print("Backtracking succeeded.")
             else:
                 print("Backtracking failed for some courses.")
-
-
-scheduler = Scheduler()
-slot = scheduler.find_continuous_slots(instructor_id="INT01",study_hours=3)
-print(slot)
