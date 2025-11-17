@@ -82,15 +82,6 @@
       "priority": 2
     },
     {
-      "course_code": "LNG220",
-      "course_name": "Academic English",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT05",
-      "priority": 2
-    },
-    {
       "course_code": "ENE101",
       "course_name": "Signals and Systems",
       "year": 1,
@@ -151,15 +142,6 @@
       "credits": 3,
       "study_hours": 3,
       "instructorId": "INT04",
-      "priority": 2
-    },
-    {
-      "course_code": "LNG223",
-      "course_name": "English for Workplace Communication",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT05",
       "priority": 2
     },
     {
