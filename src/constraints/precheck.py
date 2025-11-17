@@ -15,14 +15,15 @@ def check_assign_rules(instructor, course, slot_ids, time_slots_map, year_schedu
     courses_on_day_set = set()
     for c in instructor.assigned_courses:
         if c.scheduled_slots: # Check if course is actually scheduled
-            day_of_course = time_slots_map[c.scheduled_slots[0]].day
-            if day_of_course == slot_day:
+            c_day = time_slots_map[c.scheduled_slots[0]].day
+            if c_day == slot_day:
                 courses_on_day_set.add(c.course_code)
+
+    if course.course_code in courses_on_day_set:
+        return False
     
-    # Check if this new course exceeds the limit
-    if course.course_code not in courses_on_day_set:
-        if len(courses_on_day_set) + 1 > instructor.max_daily_courses:
-            return False
+    if len(courses_on_day_set) + 1 > instructor.max_daily_courses:
+        return False
     
     # --- 3. Check Max Morning/Afternoon Courses ---
     
@@ -36,14 +37,16 @@ def check_assign_rules(instructor, course, slot_ids, time_slots_map, year_schedu
     slots_for_day = [s for s in time_slots_map.values() if s.day == slot_day]
     
     # Count existing courses in morning/afternoon
-    for s in slots_for_day:
-        if s.time in day_schedule and day_schedule[s.time] is not None:
-            # Get course code, remove instructor name if present
-            course_code = day_schedule[s.time].split(" (")[0]
-            if s.period == "morning":
-                m_courses.add(course_code)
-            elif s.period == "afternoon":
-                a_courses.add(course_code)
+    for sid, s_obj in time_slots_map.items():
+        if s_obj.day == slot_day:
+            # ถ้าเวลานี้มีเรียนในตารางของปีนี้
+            if s_obj.time in day_schedule:
+                c_code = day_schedule[s_obj.time] # ได้ course code เช่น "ENE100"
+                
+                if s_obj.period == "morning":
+                    m_courses.add(c_code)
+                elif s_obj.period == "afternoon":
+                    a_courses.add(c_code)
 
     # Add the new course to the count
     new_period = time_slots_map[slot_ids[0]].period
