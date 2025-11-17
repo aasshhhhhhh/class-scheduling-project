@@ -16,6 +16,6 @@ except ImportError:
     print(f"❌ Can not import 'scheduler' from: {src_path}")
     sys.exit(1)
 
-my_scheduler = Scheduler()
-slot_ids = my_scheduler.find_continuous_slots(instructor_id="INT01", study_hours=3)
-print(slot_ids)
+# my_scheduler = Scheduler()
+# slot_ids = my_scheduler.find_continuous_slots(instructor_id="INT01", study_hours=3)
+# print(slot_ids)
