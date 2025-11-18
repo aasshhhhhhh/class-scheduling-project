@@ -15,7 +15,7 @@
       "year": 1,
       "credits": 1,
       "study_hours": 1,
-      "instructorId": "INT01",
+      "instructorId": "INT08",
       "priority": 3
     },
     {
@@ -82,87 +82,6 @@
       "priority": 2
     },
     {
-      "course_code": "LNG220",
-      "course_name": "Academic English",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT05",
-      "priority": 2
-    },
-    {
-      "course_code": "ENE101",
-      "course_name": "Signals and Systems",
-      "year": 1,
-      "credits": 2,
-      "study_hours": 2,
-      "instructorId": "INT01",
-      "priority": 3
-    },
-    {
-      "course_code": "ENE102",
-      "course_name": "Fundamentals of Probability Theory and Statistics",
-      "year": 1,
-      "credits": 2,
-      "study_hours": 2,
-      "instructorId": "INT01",
-      "priority": 3
-    },
-    {
-      "course_code": "ENE104",
-      "course_name": "Circuit Analysis and Simulation",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT01",
-      "priority": 3
-    },
-    {
-      "course_code": "MTH102",
-      "course_name": "Mathematics II",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT02",
-      "priority": 1
-    },
-    {
-      "course_code": "CHM103",
-      "course_name": "Fundamental Chemistry",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT06",
-      "priority": 3
-    },
-    {
-      "course_code": "CHM160",
-      "course_name": "Chemistry Laboratory I",
-      "year": 1,
-      "credits": 1,
-      "study_hours": 3,
-      "instructorId": "INT06",
-      "priority": 3
-    },
-    {
-      "course_code": "GEN111",
-      "course_name": "Man and Ethics of Living",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT04",
-      "priority": 2
-    },
-    {
-      "course_code": "LNG223",
-      "course_name": "English for Workplace Communication",
-      "year": 1,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT05",
-      "priority": 2
-    },
-    {
       "course_code": "ENE200",
       "course_name": "Electrical Signal Measurements and Instrumentation",
       "year": 2,
@@ -177,7 +96,7 @@
       "year": 2,
       "credits": 1,
       "study_hours": 3,
-      "instructorId": "INT01",
+      "instructorId": "INT08",
       "priority": 3
     },
     {
@@ -195,7 +114,7 @@
       "year": 2,
       "credits": 2,
       "study_hours": 2,
-      "instructorId": "INT08",
+      "instructorId": "INT12",
       "priority": 3
     },
     {
@@ -204,7 +123,7 @@
       "year": 2,
       "credits": 2,
       "study_hours": 2,
-      "instructorId": "INT01",
+      "instructorId": "INT12",
       "priority": 3
     },
     {
@@ -244,15 +163,6 @@
       "priority": 2
     },
     {
-      "course_code": "MEE214",
-      "course_name": "Engineering Mechanics",
-      "year": 2,
-      "credits": 3,
-      "study_hours": 3,
-      "instructorId": "INT09",
-      "priority": 3
-    },
-    {
       "course_code": "ENE341",
       "course_name": "Linear Control Systems",
       "year": 3,
@@ -276,7 +186,7 @@
       "year": 3,
       "credits": 2,
       "study_hours": 2,
-      "instructorId": "INT01",
+      "instructorId": "INT08",
       "priority": 3
     },
     {
@@ -294,7 +204,7 @@
       "year": 3,
       "credits": 2,
       "study_hours": 2,
-      "instructorId": "INT01",
+      "instructorId": "INT12",
       "priority": 3
     },
     {
@@ -321,7 +231,7 @@
       "year": 3,
       "credits": 1,
       "study_hours": 2,
-      "instructorId": "INT01",
+      "instructorId": "INT12",
       "priority": 3
     },
     {
@@ -448,6 +358,15 @@
       "instructorName": "Siriporn",
       "department": "PRE",
       "available_slots": [33, 34, 35, 36, 37, 38, 39, 40, 25, 26, 27, 28, 29, 30, 31, 32],
+      "max_weekly_hours": 15,
+      "max_daily_courses": 2
+    }
+    ,
+    {
+      "instructorId": "INT12",
+      "instructorName": "Siriwan",
+      "department": "PRE",
+      "available_slots": [13,14,15,16,20,21,22,23,24,29,30,35,36,37],
       "max_weekly_hours": 15,
       "max_daily_courses": 2
     }
@@ -737,7 +656,7 @@
   "config": {
     "max_weekly_hours": 15,
     "max_daily_courses": 2,
-    "forbidden_slot_ids": [5, 6, 7, 8],
+    "forbidden_slot": [5, 6, 7, 8],
     "max_morning_courses": 2,
     "max_afternoon_courses": 2,
     "lunch_break": "12:30-13:30"
