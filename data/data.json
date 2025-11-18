@@ -363,7 +363,7 @@
     }
     ,
     {
-      "instructorId": "INT11",
+      "instructorId": "INT12",
       "instructorName": "Siriwan",
       "department": "PRE",
       "available_slots": [13,14,15,16,20,21,22,23,24,29,30,35,36,37],
