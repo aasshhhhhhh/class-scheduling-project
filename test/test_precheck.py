@@ -118,7 +118,7 @@ if __name__ == "__main__":
     
     # 4. แสดงผลลัพธ์
     print("\n--- Test Result ---")
-    if valid:
+    if valid:  
         print(f"✅ Pre-schedule validation successful: {msg}")
     else:
         print(f"❌ Pre-schedule validation failed: {msg}")
