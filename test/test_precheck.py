@@ -1,4 +1,5 @@
-# test/test_precheck.py
+# test/test_precheck.py 
+# รันไม่ได้ติด error
 
 import sys
 import os
