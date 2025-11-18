@@ -1,29 +1,20 @@
 import os
 import sys
 
-
 # --- 1. แก้ไข Path ---
 # ได้ .../Project_Root/test
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # ได้ .../Project_Root
 project_root = os.path.dirname(current_dir) 
 
-# สร้าง Path ไปยัง src
-src_path = os.path.join(project_root, 'src')
-# เพิ่ม .../Project_Root/src เข้าไปใน sys.path
-sys.path.insert(0, src_path) 
 
 # --- 2. แก้ไข Imports (ตอนนี้ Python จะหาเจอแล้ว) ---
-try:
-    from input_handler import load_data
-    from output_formatter import OutputFormatter
-    from scheduler import Scheduler # <-- ⭐️ 1. เพิ่ม Import นี้
-except ModuleNotFoundError:
-    print(f"❌ ยังหา Module ไม่เจอ, ตรวจสอบว่า 'src' path ถูกต้อง: {src_path}")
-    sys.exit(1)
 
+from input_handler import load_data
+from output_formatter import OutputFormatter
+from scheduler import Scheduler # <-- ⭐️ 1. เพิ่ม Import นี้
 
-def test_with_real_data():
+def output_schedule():
     """ทดสอบ Output Formatter ด้วยข้อมูลจริงจาก JSON"""
     print("🧪 ทดสอบ Output Formatter ด้วยข้อมูลจริง")
     print("=" * 50)
@@ -63,5 +54,4 @@ def test_with_real_data():
         print("   - Data Structure (src/data_structures.py) ไม่ครบถ้วน")
         print("   - Input Handler (src/input_handler.py) มีปัญหา")
 
-if __name__ == "__main__":
-    test_with_real_data()
+output_schedule()
