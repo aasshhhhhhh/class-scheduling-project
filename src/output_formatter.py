@@ -11,14 +11,13 @@ class OutputFormatter:
 
     def display_schedule_by_year(self, year):
         """แสดงตารางเรียนสำหรับปีที่กำหนด"""
-        print(f"\n🎓 ตารางเรียนปี {year}")
+        print(f"\n🎓 Year {year}")
         print("=" * 60)
 
         for day in self.days:
             print(f"\n📅 {day}:")
             print("-" * 40)
 
-            has_class = False
             for time_slot in self.time_slots: # ตรวจว่า เวลานี้ วันนี้ มีเรียนไหม?
                 schedule_info = self._get_course_info(year, day, time_slot)
                 
@@ -30,7 +29,6 @@ class OutputFormatter:
                 elif schedule_info:
                     instructor = self.schedule.instructors[schedule_info['instructor']]
                     print(f"  🕐 {time_slot} : 📚 {schedule_info['course']} - {instructor.instructorName}")
-                    has_class = True
                 else:
                     print(f"  🕐 {time_slot} : 🆓 Free") # กรณีไม่มีเรียน
 
