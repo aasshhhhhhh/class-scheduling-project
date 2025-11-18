@@ -37,15 +37,10 @@ def output_schedule():
         # 3. ตอนนี้ schedule มีข้อมูลที่จัดแล้ว ส่งไปพิมพ์ได้
         formatter = OutputFormatter(schedule)
         
-        print("\n📊 ทดสอบ display_summary():")
-        formatter.display_summary()
-        
         # วนลูป 1, 2, 3, 4
         for year_to_display in range(1, 5): 
             formatter.display_schedule_by_year(year_to_display)
         
-        # print("\n👨‍🏫 ทดสอบ display_instructor_schedule('INT01'):")
-        # formatter.display_instructor_schedule("INT01")
         
     except Exception as e:
         print(f"❌ เกิดข้อผิดพลาด: {e}")
