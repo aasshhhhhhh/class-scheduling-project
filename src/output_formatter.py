@@ -5,6 +5,7 @@ from scheduler import Scheduler
 import os
 
 
+
 class OutputFormatter:
     def __init__(self, schedule):
         self.schedule = schedule
@@ -51,17 +52,17 @@ class OutputFormatter:
     
     # ถ้าไม่มี ให้ใช้วิธีค้นหาทั้งหมด
         for course in self.schedule.courses.values():
-            if course.year != year:
-                continue
-            
-        for slot_id in course.scheduled_slots:
-            if slot_id in self.schedule.time_slots:
-                slot = self.schedule.time_slots[slot_id]
-                if slot.day == day and slot.time == time:
-                    return {
-                        'course': course.course_code,
-                        'instructor': course.instructorId
-                    }
+                if course.year != year:
+                    continue
+                
+                for slot_id in course.scheduled_slots:
+                    if slot_id in self.schedule.time_slots:
+                        slot = self.schedule.time_slots[slot_id]
+                        if slot.day == day and slot.time == time:
+                            return {
+                                'course': course.course_code,
+                                'instructor': course.instructorId
+                            }
         return None
 
     def display_instructor_schedule(self, instructor_id):
