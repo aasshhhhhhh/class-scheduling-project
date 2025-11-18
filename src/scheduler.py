@@ -136,8 +136,6 @@ class Scheduler:
         
     # Schedule using greedy algorithm
     def auto_schedule(self, use_backtracking=True):
-        for course in self.courses.values():
-            self.courses_by_year[course.year].append(course)
 
         for year in range(1, 5):
             print(f"\n=== Scheduling Year {year} ===")
