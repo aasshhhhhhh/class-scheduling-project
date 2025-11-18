@@ -1,7 +1,4 @@
-# src/output_schedule.py
-
 import os
-# import sys
 
 # ตั้งค่า Path เพื่อให้หาไฟล์เจอ ไม่ว่าจะรันจากไหน 
 current_dir = os.path.dirname(os.path.abspath(__file__))
