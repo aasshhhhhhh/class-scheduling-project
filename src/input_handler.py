@@ -80,24 +80,3 @@ def validate_data(schedule):
         raise ValueError("Data validation failed. See errors above.")
     else:
         print("✅ All data validated successfully!")
-
-# Testing
-if __name__ == "__main__":
-    # ใช้ path จำลอง หรือปรับเป็น path ที่ถูกต้องของคุณ
-    data_path = os.path.join(os.path.dirname(__file__), "..", "data", "data.json")
-
-    try:
-        my_schedule = load_data(data_path)
-        
-        print(f"Loaded {len(my_schedule.courses)} courses")
-        print(f"Loaded {len(my_schedule.time_slots)} slots")
-        print(f"Loaded {len(my_schedule.instructors)} instructors")
-        print(f"Config max_weekly_hours: {my_schedule.config.max_weekly_hours}")
-        print(f"Config max_daily_courses: {my_schedule.config.max_daily_courses}")
-        print(f"Config forbidden_slot: {my_schedule.config.forbidden_slot}")
-        print(f"Config max_morning_courses: {my_schedule.config.max_morning_courses}")
-        print(f"Config max_afternoon_courses: {my_schedule.config.max_afternoon_courses}")
-        print(f"Config Lunch Break: {my_schedule.config.lunch_break}")
-        
-    except Exception as e:
-        print(f"\nAn error occurred during loading or validation: {e}")
