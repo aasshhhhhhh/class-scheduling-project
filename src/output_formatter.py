@@ -5,6 +5,7 @@ from scheduler import Scheduler
 import os
 
 
+
 class OutputFormatter:
     def __init__(self, schedule):
         self.schedule = schedule
@@ -51,17 +52,17 @@ class OutputFormatter:
     
     # ถ้าไม่มี ให้ใช้วิธีค้นหาทั้งหมด
         for course in self.schedule.courses.values():
-            if course.year != year:
-                continue
-            
-        for slot_id in course.scheduled_slots:
-            if slot_id in self.schedule.time_slots:
-                slot = self.schedule.time_slots[slot_id]
-                if slot.day == day and slot.time == time:
-                    return {
-                        'course': course.course_code,
-                        'instructor': course.instructorId
-                    }
+                if course.year != year:
+                    continue
+                
+                for slot_id in course.scheduled_slots:
+                    if slot_id in self.schedule.time_slots:
+                        slot = self.schedule.time_slots[slot_id]
+                        if slot.day == day and slot.time == time:
+                            return {
+                                'course': course.course_code,
+                                'instructor': course.instructorId
+                            }
         return None
 
     def display_instructor_schedule(self, instructor_id):
@@ -126,22 +127,3 @@ class OutputFormatter:
             status = "✅ พร้อมสอน" if instructor.assigned_hours > 0 else "⏳ รอการจัด"
             print(f"  {instructor.instructorName}: {instructor.assigned_hours}/{instructor.max_weekly_hours} ชั่วโมง {status}")
 
-
-# Testing
-if __name__ == "__main__":
-    # ใช้ path จำลอง หรือปรับเป็น path ที่ถูกต้องของคุณ
-    data_path = os.path.join(os.path.dirname(__file__), "..", "data", "data.json")
-
-    try:
-        my_schedule = my_schedule = load_data(data_path)
-
-        scheduler = Scheduler(my_schedule)
-        scheduler.auto_schedule()
-        formatter = OutputFormatter(my_schedule)
-
-        formatter.display_summary()
-        
-        print(my_schedule)
-        
-    except Exception as e:
-        print(f"\nAn error occurred: {e}")

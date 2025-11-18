@@ -70,13 +70,54 @@ print(f"Course slots after unassign: {target_course.scheduled_slots}")
 is_occupied = slot_ids[0] in my_scheduler.student_occ_slots[target_course.year]
 print(f"Slot {slot_ids[0]} occupied status (Year {target_course.year}): {is_occupied}")
 
+# (โค้ดส่วน 1-5 ... เหมือนเดิม ...)
+
 # 6. Test Auto Schedule
 print("\n--- Testing auto_schedule ---")
 # รีเซ็ตสถานะก่อน
 my_scheduler = Scheduler() 
 my_scheduler.auto_schedule(use_backtracking=True)
 
-# นับจำนวนวิชาที่ลงทะเบียนสำเร็จ
-scheduled_count = sum(1 for c in my_scheduler.courses.values() if c.scheduled_slots)
+# --- ⭐️ เริ่มแก้ไข/แทนที่ส่วนนับผลรวม (ตั้งแต่บรรทัด 81) ⭐️ ---
+
+# สร้าง Dictionary เพื่อนับ 2 แบบ: ทั้งหมด vs. จัดตารางแล้ว
+year_counts_total = {1:0, 2:0, 3:0, 4:0}
+total_hours_total = {1:0, 2:0, 3:0, 4:0}
+year_counts_scheduled = {1:0, 2:0, 3:0, 4:0}
+total_hours_scheduled = {1:0, 2:0, 3:0, 4:0}
+
+scheduled_count = 0
 total_count = len(my_scheduler.courses)
-print(f"Auto-schedule result: {scheduled_count}/{total_count} courses scheduled.")
+
+for course in my_scheduler.courses.values():
+    y = course.year
+    h = course.study_hours
+    
+    # 1. นับยอดรวม "ทั้งหมด" ของปีนั้นๆ
+    if y in year_counts_total:
+        year_counts_total[y] += 1
+        total_hours_total[y] += h
+
+    # 2. นับยอด "ที่จัดตารางสำเร็จ"
+    if course.scheduled_slots:
+        if y in year_counts_scheduled:
+            year_counts_scheduled[y] += 1
+            total_hours_scheduled[y] += h
+        scheduled_count += 1 # อัปเดตยอดรวมที่จัดได้
+
+print("\n--- Courses per Year and Total Study Hours per Year (Scheduled / Total) ---")
+for year in sorted(year_counts_total.keys()):
+    # ดึงค่ายอดรวม
+    total_c = year_counts_total[year]   
+    total_h = total_hours_total[year]   
+    
+    # ดึงค่ายอดที่จัดได้
+    scheduled_c = year_counts_scheduled[year]
+    scheduled_h = total_hours_scheduled[year]
+    
+    # พิมพ์สรุปแยกตามปี
+    print(f"  - Year {year}: {scheduled_c}/{total_c} courses, Total {scheduled_h}/{total_h} hours")
+
+# พิมพ์สรุปผลรวมสุดท้าย
+print(f"\nAuto-schedule result: {scheduled_count}/{total_count} courses scheduled.")
+# --- ⭐️ สิ้นสุดการแก้ไข ⭐️ ---
