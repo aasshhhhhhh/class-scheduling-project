@@ -1,4 +1,3 @@
-
 def validate_post_schedule(timetable, instructors, time_slots, config):
     """
     Validates the entire schedule after all assignments are made (Post-check).
@@ -68,15 +67,15 @@ def validate_post_schedule(timetable, instructors, time_slots, config):
     # --- Constraint: Max courses per day (Instructor) ---
     for iid, days in instructor_courses_day.items():
         for d, course_set in days.items():
-            if len(course_set) > config["max_courses_per_day"]:
+            if len(course_set) > config["max_daily_courses"]:
                 # Changed error message to English
-                return False, f"ERROR: {instructors[iid]['instructorName']} teaches more than {config['max_courses_per_day']} courses on {d}"
+                return False, f"ERROR: {instructors[iid]['instructorName']} teaches more than {config['max_daily_courses']} courses on {d}"
 
     # --- Constraint: Max hours per week (Instructor) ---
     for iid, total_hours in instructor_hours.items():
-        if total_hours > config["max_hours_per_week"]:
+        if total_hours > config["max_weekly_hours"]:
             # Changed error message to English
-            return False, f"ERROR: {instructors[iid]['instructorName']} teaches over {config['max_hours_per_week']} hours/week"
+            return False, f"ERROR: {instructors[iid]['instructorName']} teaches over {config['max_weekly_hours']} hours/week"
         
     forbidden_slots = {t["slotId"] for t in time_slots if t["forbidden"]}
 
