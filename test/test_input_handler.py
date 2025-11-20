@@ -16,7 +16,7 @@ except ImportError:
 
 # Testing
 if __name__ == "__main__":
-    # ใช้ path จำลอง หรือปรับเป็น path ที่ถูกต้องของคุณ
+    # ใช้ path จำลอง หรือปรับเป็น path ที่ถูกต้อง
     data_path = os.path.join(os.path.dirname(__file__), "..", "data", "data.json")
 
     try:
